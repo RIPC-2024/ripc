@@ -78,7 +78,7 @@ for a in range(1,3):
     image_aug, bbs_aug = seq(image = image, bounding_boxes = bbs) # image_aug: 증강된 이미지, bbs_aug: 증강된 바운딩박스
     print(bbs_aug)
     # 객체의 위치가 변하기에 label파일의 BB의 값도 변경해서 저장해야한다.
-    cv2.imwrite('/content/drive/My Drive/after_humsat/car/images/train/' + "humsat__" + str(a) + file, image_aug) # 회전된 이미지 저장
+    cv2.imwrite('/content/drive/My Drive/after_huesat/car/images/train/' + "huesat__" + str(a) + file, image_aug) # 회전된 이미지 저장
 
     # 회전된 바운딩 박스 좌표 가져오기
     after_bounding = []
@@ -95,7 +95,7 @@ for a in range(1,3):
       after_bounding.append([int(boundingboxes[my_i][0]), x_center_aug, y_center_aug, width_aug, height_aug])
       my_i = my_i + 1
 
-    f = open('/content/drive/My Drive/after_humsat/car/labels/train/' + "humsat__" + str(a) +labelfile, "w") # 회전 정보를 담은 label파일 저장
+    f = open('/content/drive/My Drive/after_huesat/car/labels/train/' + "huesat__" + str(a) +labelfile, "w") # 회전 정보를 담은 label파일 저장
     for i in range(len(after_bounding)):
       for j in range(5): # 각 바운딩 박스의 5개의 값 (클래스, )
         if j == 4: # 마지막 값일 때
