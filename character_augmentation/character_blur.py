@@ -1,3 +1,4 @@
+# blur 강도는 1,2,3까지만
 import os
 import cv2
 import scipy
