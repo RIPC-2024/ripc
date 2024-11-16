@@ -55,7 +55,7 @@ class GTUtility(BaseGTUtility):
                     box = np.array([x, y, x + w, y + h])
 
                     # Corrected: Handle 'region_attributes' structure
-                    txt = region['region_attributes'].get('class', '')
+                    txt = region['region_attributes']['text']
 
                     boxes.append(box)
                     text.append(txt)
